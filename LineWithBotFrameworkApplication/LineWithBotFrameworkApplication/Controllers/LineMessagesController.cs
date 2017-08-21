@@ -35,7 +35,7 @@ namespace $safeprojectname$.Controllers
 
             // Line may send multiple events in one message, so need to handle them all.
             foreach (Event lineEvent in activity.Events)
-            {
+            {   //test
                 LineMessageHandler handler = new LineMessageHandler(lineEvent);
                 await handler.Initialize();
                 Profile profile = await handler.GetProfile(lineEvent.Source.UserId);
